@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:text="Next Activity"
+        android:layout_marginHorizontal="20dp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/btn_next"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/tv_heading"
+        android:layout_height="wrap_content"
+        android:text="Activty LifeCyle with Fragmnet"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:layout_below="@id/btn_next"
+        android:layout_centerHorizontal="true"
+         />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:id="@+id/f_conatiner"
+        android:layout_height="match_parent"
+       android:layout_below="@id/tv_heading"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_above="@id/bottom_container"
+        >
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentcontainerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+             />
+
+
+        <!-- <com.google.android.material.tabs.TabLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:id="@+id/tablayout"/>
+         <androidx.viewpager2.widget.ViewPager2
+             android:id="@+id/viewpager"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="horizontal" />-->
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:id="@+id/bottom_container"
+        android:layout_alignParentBottom="true">
+<Button
+    android:layout_width="0dp"
+    android:layout_height="50dp"
+    android:layout_weight="1"
+    android:text="Fragment1"
+    android:layout_marginHorizontal="5dp"
+    android:id="@+id/btn_fragment1"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="Fragment2"
+            android:layout_marginHorizontal="5dp"
+            android:id="@+id/btn_fragment2"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
